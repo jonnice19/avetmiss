@@ -1,0 +1,13 @@
+<ul class="navbar-nav navbar-sidenav">
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <a class="nav-link"       
+      *ngFor="let item of nav" 
+      [routerLink]="item.link"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: item.exact }"
+      >
+      <i class="fa  {{ item.icon }}"></i> &nbsp;
+      <span class="nav-link-text">{{ item.name }}</span>
+    </a>
+  </li>
+</ul>
