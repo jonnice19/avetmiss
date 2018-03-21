@@ -12,6 +12,7 @@ import { TrainingOrganisationTableComponent } from './components/training-organi
 import { TrainingAddressComponent } from './components/training-address/training-address.component';
 // Services
 import { TrainingOrganisationService } from './training-organisation.service';
+import { TrainingContactComponent } from './components/training-contact/training-contact.component';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { TrainingOrganisationService } from './training-organisation.service';
     TrainingOrganisationTableComponent, 
     TrainingOrganisationFormComponent, 
     TrainingOrganisationComponent, 
-    TrainingAddressComponent
+    TrainingAddressComponent, TrainingContactComponent
   ],
   imports: [
     CommonModule,

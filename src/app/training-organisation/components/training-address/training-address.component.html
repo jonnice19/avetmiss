@@ -5,7 +5,7 @@
       <!-- start: Col -->
       <div class="col-md-6">
         <div class="form-group">
-          <label>Address first line</label>
+          <label>Address first line<span class="text-danger">*</span></label>
           <input formControlName="firstLine" type="text" class="form-control" placeholder="Address first line">
         </div>
       </div>
@@ -24,7 +24,7 @@
       <!-- start: Col -->
       <div class="col-md-5">
         <div class="form-group">
-          <label>Address location - suburb</label>
+          <label>Address location - suburb<span class="text-danger">*</span></label>
           <input formControlName="suburb" type="text" class="form-control" placeholder="Address location - suburb">
         </div>
       </div>
@@ -33,7 +33,7 @@
       <div class="col-md-4">
           <div class="form-group">
           <label>State id</label>
-          <input formControlName="stateId" type="text" class="form-control" placeholder="State id">
+          <input formControlName="stateId" type="text" class="form-control" placeholder="State id" readonly>
         </div>
         </div>
         <!-- end: Col -->
@@ -41,7 +41,7 @@
       <div class="col-md-3">
           <div class="form-group">
           <label>Postcode</label>
-          <input formControlName="postcode" type="text" class="form-control" placeholder="Postcode">
+          <input formControlName="postcode" type="text" class="form-control" placeholder="Postcode" readonly>
         </div>
         </div>
         <!-- end: Col -->

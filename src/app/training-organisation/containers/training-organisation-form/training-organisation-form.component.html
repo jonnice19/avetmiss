@@ -1,25 +1,27 @@
 <div class="row">
   <div class="col-12">
     <h4>Create New Training Organisation</h4><br>
-    <div class="card">
-      <div class="card-body">
-        <form [formGroup]="trainingOrganisationForm" (ngSubmit)="onSubmit()">
-
+    <form [formGroup]="trainingOrganisationForm" (ngSubmit)="onSubmit()">
+      <div class="card">
+        <div class="card-body">          
           <app-training-organisation
             [parent]="trainingOrganisationForm"
             [trainingOrganisationTypeIds]="trainingOrganisationTypeIds">            
           </app-training-organisation>
 
           <app-training-address
-          [parent]="trainingOrganisationForm">
+            [parent]="trainingOrganisationForm">
           </app-training-address>
 
-          <pre>
-            {{ trainingOrganisationForm.value | json }}
-          </pre>
-
-        </form>
+          <app-training-contact
+            [parent]="trainingOrganisationForm">            
+          </app-training-contact> 
+        </div>
+        <div class="card-footer text-right">
+          <a [routerLink]="['/training-organisation']" class="btn btn-default">Cancel</a>
+          <input type="submit" class="btn btn-primary" value="Save" [disabled]="trainingOrganisationForm.invalid">
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

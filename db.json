@@ -1,8 +1,19 @@
 {
   "training-org-type-id" : [
-    {
-      "id" : 21,
-      "name" : "School - Government"
-    }
+    { "id" : 21, "name" : "School - Government" },
+    { "id" : 25, "name" : "School - Catholic" },
+    { "id" : 27, "name" : "School - Independent" },
+    { "id" : 31, "name" : "Technical and Further Education Institute" },
+    { "id" : 41, "name" : "University - Government" },
+    { "id" : 43, "name" : "University - Non-Government Catholic" },
+    { "id" : 45, "name" : "University - Non-Government Independent" },
+    { "id" : 51, "name" : "Enterprise - Government" },
+    { "id" : 53, "name" : "Enterprise - Non-government" },
+    { "id" : 61, "name" : "Community based adult education provider" },
+    { "id" : 91, "name" : "Education/training business or centre: Privately operated registered training organisation" },
+    { "id" : 93, "name" : "Professional association" },
+    { "id" : 95, "name" : "Industry association" },
+    { "id" : 97, "name" : "Equipment and/or product manufacturer or supplier" },
+    { "id" : 99, "name" : "Other - not elsewhere classified" }
   ]
 }

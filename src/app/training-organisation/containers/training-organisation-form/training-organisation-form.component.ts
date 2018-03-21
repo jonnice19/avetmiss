@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 
 import { TrainingOrganisationTypeId } from '../../models/training-organisation-type-id.interface';
 
@@ -23,19 +23,23 @@ export class TrainingOrganisationFormComponent implements OnInit {
   ngOnInit() {
     this.trainingOrganisationForm = this.fb.group({
       trainingOrganisation: this.fb.group({
-        id: '',
-        name: '',
-        typeId: ''
+        id: ['', [Validators.required]],
+        name: ['', [Validators.required]],
+        typeId: ['', [Validators.required]]
       }),
       trainingAddress: this.fb.group({
-        firstLine: '',
+        firstLine: ['', [Validators.required]],
         secondLine: '',
-        suburb: '',
+        suburb: ['', [Validators.required]],
         stateId: '',
         postcode: ''
       }),
-      trainingContact: this.createContact({}),
-      trainingContacts: this.fb.array([])
+      trainingContact: this.fb.group({
+        contactName: ['', [Validators.required]],
+        phoneNumber: ['', [Validators.min(10), Validators.max(10)]],
+        faxNumber: '',
+        email: ['', [Validators.email]]
+      })
     });
 
     this.getTypeIds();
@@ -49,13 +53,7 @@ export class TrainingOrganisationFormComponent implements OnInit {
       );
   }
 
-  createContact(contact) {
-    return this.fb.group({
-      name: '',
-      phoneNumber: '',
-      faxNumber: '',
-      email: ''
-    })
+  onSubmit() {
+    console.log(this.trainingOrganisationForm.value);
   }
-
 }
