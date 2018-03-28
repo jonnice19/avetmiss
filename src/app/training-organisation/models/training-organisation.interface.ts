@@ -7,4 +7,8 @@ export interface TrainingOrganisation {
   addresSuburb: string,
   addressStateId: string,
   addressPostCode: number, 
+  contactName: string,
+  contactNumber: number,
+  contactFax: number,
+  contactEmail: string
 }

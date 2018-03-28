@@ -1,0 +1,7 @@
+<app-program-form 
+  [program]="program"
+  (submitted)="updateProgram($event)"
+  (remove)="deleteProgram($event)">
+  <h4>{{ program?.name || 'Program Detail'}}</h4>
+  <button type="submit" class="btn btn-primary">Update</button>
+</app-program-form>

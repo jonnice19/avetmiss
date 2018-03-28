@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { TrainingOrganisation } from '../../models/training-organisation.interface';
 
 @Component({
   selector: 'app-training-organisation-table',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./training-organisation-table.component.scss']
 })
 export class TrainingOrganisationTableComponent implements OnInit {
+
+  @Input()
+  trainingOrganisations: TrainingOrganisation[];
 
   constructor() { }
 

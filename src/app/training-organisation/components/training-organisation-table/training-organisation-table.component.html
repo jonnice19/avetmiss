@@ -13,14 +13,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>hello</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
+          <tr *ngFor="let rto of trainingOrganisations">
+            <td>{{ rto.id }}</td>
+            <td>{{ rto.name }}</td>
+            <td>{{ rto.typeId }}</td>
+            <td>{{ rto.addresSuburb }}</td>
+            <td>{{ rto.addressStateId }}</td>
             <td>
-              <a href="#" class="btn btn-success btn-sm"><i class="fa fa-eye"></i> View</a>
+              <a [routerLink]="['detail', rto.id]" class="btn btn-success btn-sm"><i class="fa fa-eye"></i> View</a>
             </td>
           </tr>
         </tbody>

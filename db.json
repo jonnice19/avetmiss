@@ -1,19 +1,202 @@
 {
-  "training-org-type-id" : [
-    { "id" : 21, "name" : "School - Government" },
-    { "id" : 25, "name" : "School - Catholic" },
-    { "id" : 27, "name" : "School - Independent" },
-    { "id" : 31, "name" : "Technical and Further Education Institute" },
-    { "id" : 41, "name" : "University - Government" },
-    { "id" : 43, "name" : "University - Non-Government Catholic" },
-    { "id" : 45, "name" : "University - Non-Government Independent" },
-    { "id" : 51, "name" : "Enterprise - Government" },
-    { "id" : 53, "name" : "Enterprise - Non-government" },
-    { "id" : 61, "name" : "Community based adult education provider" },
-    { "id" : 91, "name" : "Education/training business or centre: Privately operated registered training organisation" },
-    { "id" : 93, "name" : "Professional association" },
-    { "id" : 95, "name" : "Industry association" },
-    { "id" : 97, "name" : "Equipment and/or product manufacturer or supplier" },
-    { "id" : 99, "name" : "Other - not elsewhere classified" }
+  "training-org-type-id": [
+    {
+      "id": 21,
+      "name": "School - Government"
+    },
+    {
+      "id": 25,
+      "name": "School - Catholic"
+    },
+    {
+      "id": 27,
+      "name": "School - Independent"
+    },
+    {
+      "id": 31,
+      "name": "Technical and Further Education Institute"
+    },
+    {
+      "id": 41,
+      "name": "University - Government"
+    },
+    {
+      "id": 43,
+      "name": "University - Non-Government Catholic"
+    },
+    {
+      "id": 45,
+      "name": "University - Non-Government Independent"
+    },
+    {
+      "id": 51,
+      "name": "Enterprise - Government"
+    },
+    {
+      "id": 53,
+      "name": "Enterprise - Non-government"
+    },
+    {
+      "id": 61,
+      "name": "Community based adult education provider"
+    },
+    {
+      "id": 91,
+      "name": "Education/training business or centre: Privately operated registered training organisation"
+    },
+    {
+      "id": 93,
+      "name": "Professional association"
+    },
+    {
+      "id": 95,
+      "name": "Industry association"
+    },
+    {
+      "id": 97,
+      "name": "Equipment and/or product manufacturer or supplier"
+    },
+    {
+      "id": 99,
+      "name": "Other - not elsewhere classified"
+    }
+  ],
+  "training-organisations": [
+    {
+      "id": 123,
+      "name": "Dummy training organisation",
+      "typeId": 91,
+      "addressFirstLine": "49 Marx Hill Road",
+      "addressSecondLine": "string",
+      "addresSuburb": "EAST TOOWOOMBA",
+      "addressStateId": "Queensland",
+      "addressPostCode": 4350,
+      "contactName": "Dummy contact",
+      "contactNumber": 123456,
+      "contactFax": 123456,
+      "contactEmail": "dummy@email.com"
+    }
+  ],
+  "programs": [
+    {
+      "id": 1123,
+      "name": "Course in Resaw Bench Operationss",
+      "recognitionId": 12,
+      "levelEducationId": 991,
+      "fieldEducationId": 123,
+      "anzscoId": 212300,
+      "nominalHours": 23,
+      "flag": 0
+    }
+  ],
+  "programs-recognition-id": [
+    {
+      "id": 11,
+      "name": "Nationally accredited qualification specified in a national training package"
+    },
+    {
+      "id": 12,
+      "name": "Nationally recognised accredited course, other than a qualification specified in a national TP"
+    },
+    {
+      "id": 13,
+      "name": "Nationally recognised skill set specified in a national training package"
+    },
+    {
+      "id": 14,
+      "name": "Other Courses"
+    },
+    {
+      "id": 15,
+      "name": "Higher level qualifications"
+    },
+    {
+      "id": 16,
+      "name": "Locally recognised skill set"
+    }
+  ],
+  "level-of-educ-id": [
+    {
+      "id": 211,
+      "name": "Graduate Diploma"
+    },
+    {
+      "id": 221,
+      "name": "Graduate Certificate"
+    },
+    {
+      "id": 311,
+      "name": "Bachelor Degree (Honours)"
+    },
+    {
+      "id": 312,
+      "name": "Bachelor Degree (Pass)"
+    },
+    {
+      "id": 411,
+      "name": "Advanced Diploma"
+    },
+    {
+      "id": 413,
+      "name": "Associate Degree"
+    },
+    {
+      "id": 421,
+      "name": "Diploma"
+    },
+    {
+      "id": 511,
+      "name": "Certificate IV"
+    },
+    {
+      "id": 514,
+      "name": "Certificate III"
+    },
+    {
+      "id": 521,
+      "name": "Certificate II"
+    },
+    {
+      "id": 524,
+      "name": "Certificate I"
+    },
+    {
+      "id": 611,
+      "name": "Year 12"
+    },
+    {
+      "id": 613,
+      "name": "Year 11"
+    },
+    {
+      "id": 621,
+      "name": "Year 10"
+    },
+    {
+      "id": 912,
+      "name": "Other Non-award Courses"
+    },
+    {
+      "id": 991,
+      "name": "Statement of Attainment Not Identifiable by Level"
+    },
+    {
+      "id": 992,
+      "name": "Bridging and Enabling Courses Not Identifiable by Level"
+    },
+    {
+      "id": 999,
+      "name": "Education not elsewhere classified"
+    }
+  ],
+  "vet-flag": [
+    {
+      "id": 1,
+      "name": "The intention of the program of study is vocational"
+    },
+    {
+      "id": 0,
+      "name": "The intention of the program of study is not vocational"
+    }
   ]
 }

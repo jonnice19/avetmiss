@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Recognition ID</th>
+            <th scope="col">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let program of programs">
+            <td scope="row">{{ program.id }}</td>
+            <td scope="row">{{ program.name }}</td>
+            <td scope="row">{{ program.recognitionId }}</td>
+            <td>
+              <button (click)="goToProgram(program)" class="btn btn-success btn-sm"><i class="fa fa-eye"></i> View</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

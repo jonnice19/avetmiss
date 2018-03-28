@@ -5,6 +5,10 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["app/*"]
+    },
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",

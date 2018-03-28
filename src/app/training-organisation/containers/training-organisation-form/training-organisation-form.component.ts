@@ -17,7 +17,7 @@ export class TrainingOrganisationFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private trainingOrgTypeIdService: TrainingOrganisationService
+    private trainingOrgService: TrainingOrganisationService
   ) { }
 
   ngOnInit() {
@@ -46,7 +46,7 @@ export class TrainingOrganisationFormComponent implements OnInit {
   }
 
   getTypeIds() {
-    this.trainingOrgTypeIdService
+    this.trainingOrgService
       .getTypeIds()
       .subscribe(
         ((data: TrainingOrganisationTypeId[]) => this.trainingOrganisationTypeIds = data)

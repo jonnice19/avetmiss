@@ -10,6 +10,7 @@ import { TrainingOrganisationFormComponent } from './containers/training-organis
 import { TrainingOrganisationComponent } from './components/training-organisation/training-organisation.component';
 import { TrainingOrganisationTableComponent } from './components/training-organisation-table/training-organisation-table.component';
 import { TrainingAddressComponent } from './components/training-address/training-address.component';
+import { TrainingOrganisationDetailComponent } from './components/training-organisation-detail/training-organisation-detail.component';
 // Services
 import { TrainingOrganisationService } from './training-organisation.service';
 import { TrainingContactComponent } from './components/training-contact/training-contact.component';
@@ -21,7 +22,9 @@ import { TrainingContactComponent } from './components/training-contact/training
     TrainingOrganisationTableComponent, 
     TrainingOrganisationFormComponent, 
     TrainingOrganisationComponent, 
-    TrainingAddressComponent, TrainingContactComponent
+    TrainingAddressComponent, 
+    TrainingContactComponent, 
+    TrainingOrganisationDetailComponent
   ],
   imports: [
     CommonModule,
