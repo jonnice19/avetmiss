@@ -12,7 +12,7 @@ export class AsideComponent implements OnInit {
     { link: '/training-organisation-delivery-location', name: 'Delivery Location', exact: true, icon: 'fa-location-arrow' },
     { link: '/', name: 'Trainer', exact: true, icon: 'fa-vcard' },
     { link: '/programs', name: 'Program', exact: true, icon: 'fa-calendar-o' },
-    { link: '/', name: 'Subject', exact: true, icon: 'fa-cube' },
+    { link: '/subjects', name: 'Subject', exact: true, icon: 'fa-cube' },
     { link: '/', name: 'Client', exact: true, icon: 'fa-user' },
     { link: '/', name: 'Client Training Activity', exact: true, icon: 'fa-cubes' },
     { link: '/', name: 'Program Completion', exact: true, icon: 'fa-calendar-check-o' }

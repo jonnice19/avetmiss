@@ -1,0 +1,10 @@
+<app-subject-form *ngIf="subject"
+  [flags]="flags"
+  [subject]="subject"
+  [vetFlags]="vetFlags"
+  (submitted)="updateSubject($event)"
+  (remove)="removeSubject($event)"
+  (view)="viewList()">
+  <h4>{{ subject?.name || 'Subject Detail' }}</h4>
+  <button type="submit" class="btn btn-primary">Update</button>
+</app-subject-form>

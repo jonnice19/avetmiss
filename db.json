@@ -198,5 +198,33 @@
       "id": 0,
       "name": "The intention of the program of study is not vocational"
     }
+  ],
+  "subjects": [
+    {
+      "id": "546",
+      "name": "HeKaSe at Kultura",
+      "flag": "0",
+      "educId": "456",
+      "hours": "35",
+      "vetFlag": "1"
+    },
+    {
+      "id": "333",
+      "name": "Math",
+      "flag": "0",
+      "educId": "123",
+      "hours": "45",
+      "vetFlag": "1"
+    }
+  ],
+  "subjectFlag": [
+    {
+      "id": 0,
+      "name": "C - Unit of Competency"
+    },
+    {
+      "id": 1,
+      "name": "M - Module"
+    }
   ]
 }

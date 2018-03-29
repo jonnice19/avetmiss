@@ -1,0 +1,95 @@
+<div class="row">
+  <div class="col-12">
+    <ng-content select="h4"></ng-content><br>
+    <form [formGroup]="subjectForm" (ngSubmit)="onSubmit(subjectForm.value)">
+      <div class="card">
+        <div class="card-body">  
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>ID</label>
+                <input type="text" class="form-control" formControlName="id">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Flag</label>
+                <select class="form-control" formControlName="flag">
+                  <option value="-1">-- Please Select --</option>
+                  <option
+                    *ngFor="let flag of flags"
+                    [value]="flag.id">
+                    {{ flag.name }}
+                  </option>
+                </select>
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Field of Education id</label>
+                <input type="text" class="form-control" formControlName="educId">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Nominal Hours</label>
+                <input type="text" class="form-control" formControlName="hours">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>VET Flag</label>
+                <select class="form-control" formControlName="vetFlag">
+                  <option value="-1">-- Please Select</option>
+                  <option
+                    *ngFor="let vetFlag of vetFlags"
+                    [value]="vetFlag.id">
+                    {{ vetFlag.id ? 'Yes' : 'No' }} - {{ vetFlag.name }}
+                  </option>
+                </select>
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>        
+        </div>
+        <div class="card-footer text-right">
+          <button 
+            *ngIf="(subject !== undefined)"
+            type="button" 
+            class="btn btn-danger pull-left" 
+            (click)="onDelete()">
+            <i class="fa fa-trash"></i> Delete
+          </button>
+          <button type="button" class="btn btn-default" (click)="handleView()">Cancel</button>
+          <ng-content select="button"></ng-content>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

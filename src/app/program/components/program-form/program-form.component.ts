@@ -15,11 +15,11 @@ import { ProgramService } from '../../program.service';
 export class ProgramFormComponent implements OnInit, OnChanges {
 
   programForm: FormGroup;
-  programIds: Id[];
-  levelEducIds: Id[];
-  vetFlags: Flag[];
 
   @Input() program: Program;
+  @Input() programIds: Id[];
+  @Input() levelEducIds: Id[];
+  @Input() vetFlags: Flag[];
 
   @Output() submitted: EventEmitter<Program> = new EventEmitter();
   @Output() remove: EventEmitter<Program> = new EventEmitter();
@@ -40,21 +40,6 @@ export class ProgramFormComponent implements OnInit, OnChanges {
       nominalHours: [null, [Validators.required]],
       flag: [-1, [Validators.required]]
     })
-
-    this.programService.getProgramRecognitionIds()
-      .subscribe(
-        (data: Id[]) => this.programIds = data
-      )
-
-    this.programService.getLevelEducIds()
-      .subscribe(
-        (data: Id[]) => this.levelEducIds = data
-      )
-    
-    this.programService.getVetFlag()
-      .subscribe(
-        (data: Flag[]) => this.vetFlags = data
-      )
   }
 
   ngOnChanges(changes: SimpleChanges) {

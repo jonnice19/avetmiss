@@ -1,0 +1,8 @@
+<app-subject-form
+  [flags]="flags"
+  [vetFlags]="vetFlags"
+  (submitted)="createSubject($event)"
+  (view)="viewList()">
+  <h4>Create New Subject</h4>
+  <button type="submit" class="btn btn-primary">Save</button>
+</app-subject-form>
