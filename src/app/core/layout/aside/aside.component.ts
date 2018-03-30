@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AsideComponent implements OnInit {
 
   nav = [
-    { link: '/training-organisation', name: 'Training Organisation', exact: true, icon: 'fa-building' },
-    { link: '/training-organisation-delivery-location', name: 'Delivery Location', exact: true, icon: 'fa-location-arrow' },
-    { link: '/', name: 'Trainer', exact: true, icon: 'fa-vcard' },
+    { link: '/training-organisations', name: 'Training Organisation', exact: true, icon: 'fa-building' },
+    { link: '/delivery-locations', name: 'Delivery Location', exact: true, icon: 'fa-location-arrow' },
+    { link: '/trainers', name: 'Trainer', exact: true, icon: 'fa-vcard' },
     { link: '/programs', name: 'Program', exact: true, icon: 'fa-calendar-o' },
     { link: '/subjects', name: 'Subject', exact: true, icon: 'fa-cube' },
-    { link: '/', name: 'Client', exact: true, icon: 'fa-user' },
-    { link: '/', name: 'Client Training Activity', exact: true, icon: 'fa-cubes' },
-    { link: '/', name: 'Program Completion', exact: true, icon: 'fa-calendar-check-o' }
+    { link: '/clients', name: 'Client', exact: true, icon: 'fa-user' },
+    { link: '/client-activities', name: 'Client Training Activity', exact: true, icon: 'fa-cubes' },
+    { link: '/program-completion', name: 'Program Completion', exact: true, icon: 'fa-calendar-check-o' }
   ];
 
   constructor() { }

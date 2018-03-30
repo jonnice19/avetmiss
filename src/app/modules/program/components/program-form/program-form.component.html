@@ -1,0 +1,122 @@
+<div class="row">
+  <div class="col-12">
+    <ng-content select="h4"></ng-content><br>
+    <form [formGroup]="programForm" (ngSubmit)="onSubmit(programForm.value)">
+      <div class="card">
+        <div class="card-body">  
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>ID</label>
+                <input type="text" class="form-control" formControlName="id">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Recognition ID</label>
+                <select class="form-control" formControlName="recognitionId">
+                  <option value="-1">-- Please Select --</option>
+                  <option
+                    *ngFor="let recognitionId of recognitionIds"
+                    [value]="recognitionId.id">
+                    {{ recognitionId.id }} - {{ recognitionId.name }}
+                  </option>
+                </select>
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Level of Education ID</label>
+                <select class="form-control" formControlName="levelEducationId">
+                  <option value="-1">-- Please Select --</option>
+                  <option
+                    *ngFor="let levelEducationId of levelEducationIds"
+                    [value]="levelEducationId.id">
+                    {{ levelEducationId.id }} - {{ levelEducationId.name }}
+                  </option>
+                </select>
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Field of Education ID</label>
+                <input type="text" class="form-control" formControlName="fieldEducationId">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>ANZSCO ID</label>
+                <input type="number" class="form-control" formControlName="anzscoId">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>        
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Nominal Hours</label>
+                <input type="number" class="form-control" formControlName="nominalHours">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>VET Flag</label>
+                <select class="form-control" formControlName="flag">
+                  <option value="-1">-- Please Select --</option>
+                  <option
+                    *ngFor="let flag of flags"
+                    [value]="flag.id">
+                    {{ flag.id ? 'Yes' : 'No' }} - {{ flag.name }}
+                  </option>
+                </select>
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>  
+        </div>
+        <div class="card-footer text-right">
+          <button 
+            *ngIf="(program !== undefined)"
+            type="button" 
+            class="btn btn-danger pull-left" 
+            (click)="onDelete()">
+            <i class="fa fa-trash"></i> Delete
+          </button>
+          <button type="button" class="btn btn-default" (click)="onView()">Cancel</button>
+          <ng-content select="button"></ng-content>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

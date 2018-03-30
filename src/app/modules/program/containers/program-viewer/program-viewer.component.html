@@ -1,0 +1,11 @@
+<app-program-form *ngIf="program"
+  [program]="program"
+  [flags]="flags"
+  [recognitionIds]="recognitionIds"
+  [levelEducationIds]="levelEducationIds"
+  (submitted)="updateProgram($event)"
+  (remove)="removeProgram($event)"
+  (view)="viewList()">
+  <h4>{{ program?.name || 'Program Detail' }}</h4>
+  <button type="submit" class="btn btn-primary">Update</button>
+</app-program-form>

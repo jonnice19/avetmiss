@@ -9,20 +9,16 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'training-organisation',
-        loadChildren: '../../training-organisation/training-organisation.module#TrainingOrganisationModule',
-      },
-      {
-        path: 'training-organisation-delivery-location',
-        loadChildren: '../../training-organisation-delivery-location/training-organisation-delivery-location.module#TrainingOrganisationDeliveryLocationModule',
+        path: 'delivery-locations',
+        loadChildren: '../../modules/delivery-location/delivery-location.module#DeliveryLocationModule'
       },
       {
         path: 'programs',
-        loadChildren: '../../program/program.module#ProgramModule'
+        loadChildren: '../../modules/program/program.module#ProgramModule'
       },
       {
         path: 'subjects',
-        loadChildren: '../../subject/subject.module#SubjectModule'
+        loadChildren: '../../modules/subject/subject.module#SubjectModule'
       }
     ]
   }

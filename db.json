@@ -87,6 +87,16 @@
       "anzscoId": 212300,
       "nominalHours": 23,
       "flag": 0
+    },
+    {
+      "id": "444",
+      "name": "Culmination Month",
+      "recognitionId": "12",
+      "levelEducationId": "912",
+      "fieldEducationId": "456",
+      "anzscoId": 213,
+      "nominalHours": 31,
+      "flag": "0"
     }
   ],
   "programs-recognition-id": [
@@ -225,6 +235,16 @@
     {
       "id": 1,
       "name": "M - Module"
+    }
+  ],
+  "delivery-locations": [
+    {
+      "id": "123",
+      "name": "West",
+      "suburb": "West",
+      "stateId": "123",
+      "postcode": 123,
+      "countryId": 123
     }
   ]
 }

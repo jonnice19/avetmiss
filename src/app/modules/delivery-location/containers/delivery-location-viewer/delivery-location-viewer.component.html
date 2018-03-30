@@ -1,0 +1,8 @@
+<app-delivery-location-form *ngIf="deliveryLocation"
+  [deliveryLocation]="deliveryLocation"
+  (submitted)="updateDeliveryLocation($event)"
+  (delete)="removeDeliveryLocation($event)"
+  (view)="viewList()">
+  <h4>{{ deliveryLocation?.name || 'Delivery Location Detail' }}</h4>
+  <button type="submit" class="btn btn-primary">Update</button>
+</app-delivery-location-form>

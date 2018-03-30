@@ -4,7 +4,7 @@
       *ngFor="let item of nav" 
       [routerLink]="item.link"
       routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: item.exact }"
+      [routerLinkActiveOptions]="{ exact: exact }"
       >
       <i class="fa  {{ item.icon }}"></i> &nbsp;
       <span class="nav-link-text">{{ item.name }}</span>

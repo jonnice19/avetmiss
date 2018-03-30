@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Suburb</th>
+            <th scope="col">State ID</th>
+            <th scope="col">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let deliveryLocation of deliveryLocations">
+            <td scope="row">{{ deliveryLocation?.id || 'Loading' }}</td>
+            <td scope="row">{{ deliveryLocation?.name || 'Loading' }}</td>
+            <td scope="row">{{ deliveryLocation?.suburb || 'Loading' }}</td>
+            <td scope="row">{{ deliveryLocation?.stateId || 'Loading' }}</td>
+            <td>
+              <button (click)="onView(deliveryLocation?.id)" class="btn btn-success btn-sm"><i class="fa fa-eye"></i> View</button>
+            </td>
+          </tr>
+          <tr *ngIf="!deliveryLocations?.length">
+            <td colspan="5" class="text-center"><em>No data available</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<app-program-form
+  [recognitionIds]="recognitionIds"
+  [levelEducationIds]="levelEducationIds"
+  [flags]="flags"
+  (view)="viewPrograms()"
+  (submitted)="createProgram($event)">
+  <h4>Create New Program</h4>
+  <button type="submit" class="btn btn-primary">Save</button>
+</app-program-form>
