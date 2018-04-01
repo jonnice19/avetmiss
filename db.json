@@ -75,6 +75,20 @@
       "contactNumber": 123456,
       "contactFax": 123456,
       "contactEmail": "dummy@email.com"
+    },
+    {
+      "id": "345",
+      "name": "Teachier",
+      "typeId": "27",
+      "addressFirstLine": "123",
+      "addressSecondLine": "123",
+      "addresSuburb": "123",
+      "addressStateId": "123",
+      "addressPostCode": "123",
+      "contactName": "123",
+      "contactNumber": "123",
+      "contactFax": "123",
+      "contactEmail": "123"
     }
   ],
   "programs": [
@@ -245,6 +259,21 @@
       "stateId": "123",
       "postcode": 123,
       "countryId": 123
+    }
+  ],
+  "trainers": [],
+  "employment-types": [
+    {
+      "id": 0,
+      "name": "Full Time"
+    },
+    {
+      "id": 1,
+      "name": "Part Time"
+    },
+    {
+      "id": 2,
+      "name": "Contactual"
     }
   ]
 }

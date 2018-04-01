@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-12">
+      <h4>{{ title }} <a [routerLink]="['create']" class="btn btn-primary btn-sm ml-2">Create</a></h4><br>
+  
+      <app-training-organisation-list
+        [trainingOrgs]="trainingOrgs"
+        (view)="viewDetail($event)">
+      </app-training-organisation-list>
+      
+    </div>  
+  </div>
+  
+  
+  

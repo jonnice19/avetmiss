@@ -2,3 +2,12 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
+
+html {
+  -webkit-font-smoothing: antialiased;
+  color: #545e6f;
+}
+
+#mainNav{
+  background-color: #04598C !important;
+}

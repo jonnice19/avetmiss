@@ -1,0 +1,9 @@
+<app-trainer-form *ngIf="trainer"
+  [trainer]="trainer"
+  [employmentTypes]="employmentTypes"
+  (submitted)="updateSubject($event)"
+  (remove)="removeSubject($event)"
+  (view)="viewList()">
+  <h4>{{ trainer?.firstName || 'Trainer Detail' }} {{ trainer?.lastName }}</h4>
+  <button type="submit" class="btn btn-primary">Update</button>
+</app-trainer-form>

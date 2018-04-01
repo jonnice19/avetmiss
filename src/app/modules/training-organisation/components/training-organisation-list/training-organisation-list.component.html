@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Type ID</th>
+              <th scope="col">Suburb</th>
+              <th scope="col">State ID</th>
+              <th scope="col">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let trainingOrg of trainingOrgs">
+              <td scope="row">{{ trainingOrg.id }}</td>
+              <td scope="row">{{ trainingOrg.name }}</td>
+              <td scope="row">{{ trainingOrg.typeId }}</td>
+              <td scope="row">{{ trainingOrg.addresSuburb }}</td>
+              <td scope="row">{{ trainingOrg.addressStateId }}</td>
+              <td>
+                <button (click)="onView(trainingOrg.id)" class="btn btn-success btn-sm"><i class="fa fa-eye"></i> View</button>
+              </td>
+            </tr>
+            <tr *ngIf="!trainingOrgs?.length">
+              <td colspan="6" class="text-center"><em>No data available</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

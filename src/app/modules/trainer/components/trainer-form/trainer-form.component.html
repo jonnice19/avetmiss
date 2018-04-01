@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-12">
+    <ng-content select="h4"></ng-content><br>
+    <form [formGroup]="trainerForm" (ngSubmit)="onSubmit(trainerForm.value)">
+      <div class="card">
+        <div class="card-body">  
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>ID</label>
+                <input type="text" class="form-control" formControlName="id">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" formControlName="firstName">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" formControlName="lastName">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Contact Number</label>
+                <input type="text" class="form-control" formControlName="contactNumber">
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- start: FormGroup -->
+              <div class="form-group">
+                <label>Employment Type</label>
+                <select class="form-control" formControlName="employment">
+                  <option value="-1">-- Please Select --</option>
+                  <option
+                    *ngFor="let employment of employmentTypes"
+                    [value]="employment.id">
+                    {{ employment.name }}
+                  </option>
+                </select>
+              </div>
+              <!-- end: FormGroup -->
+            </div>
+          </div>
+
+        </div>
+        <div class="card-footer text-right">
+          <button 
+            *ngIf="(trainer !== undefined)"
+            type="button" 
+            class="btn btn-danger pull-left" 
+            (click)="onDelete()">
+            <i class="fa fa-trash"></i> Delete
+          </button>
+          <button type="button" class="btn btn-default" (click)="onView()">Cancel</button>
+          <ng-content select="button"></ng-content>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
